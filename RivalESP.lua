@@ -51,8 +51,7 @@ local Library = {
 -- if getgenv().LoadCustomDrawing then 
 --     loadstring(game:HttpGet("https://raw.githubusercontent.com/CodexHubX/CodexHubX/refs/heads/main/Module/Drawing.lua"))();
 -- end;
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CodexHubX/Library/refs/heads/main/Drawing.lua"))();
+local DrawingLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/CodexHubX/Library/refs/heads/main/Drawing.lua"))();
 
 local Settigs = Library.Settigs;
 local functions = setmetatable(Library,{
@@ -61,7 +60,7 @@ local functions = setmetatable(Library,{
     end,
 
     newquad = function(color ,thickness)
-        local quad = Drawing.new("Quad")
+        local quad = DrawingLib.new("Quad")
         quad.Color = color
         quad.Filled = false
         quad.Visible = false
@@ -71,7 +70,7 @@ local functions = setmetatable(Library,{
     end,
 
     newline = function(color ,thickness) 
-        local line = Drawing.new("Line")
+        local line = DrawingLib.new("Line")
         line.Visible = false
         line.Color = color 
         line.Thickness = thickness
@@ -80,7 +79,7 @@ local functions = setmetatable(Library,{
     end,
 
     newtext = function(text, color , size) 
-        local Text = Drawing.new("Text")
+        local Text = DrawingLib.new("Text")
         Text.Visible = false
         Text.Center = true
         Text.Outline = true
