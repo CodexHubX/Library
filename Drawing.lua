@@ -506,5 +506,5 @@ function DrawingLib.new(drawingType)
 end
 
 setreadonly(DrawingLib, true)
-getgenv().Drawing = DrawingLib
+--getgenv().Drawing = DrawingLib
 return DrawingLib
